@@ -1,5 +1,5 @@
-[
-  [
+{
+  "objects": [
     {
      "date": "01.01.2023",
      "oilProduction": 20.4564,
@@ -155,5 +155,5 @@
      "oilProduction": 265.793751397136,
      "liquidProduction": 318.9525016765632
     }
-   ]
-]
+  ]
+}

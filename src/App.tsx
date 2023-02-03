@@ -1,21 +1,31 @@
 import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from 'hook';
+import { useAppDispatch } from 'hook';
 import { fetchData } from 'store/data-slice';
+import { Table } from 'components/table';
+import { Header } from 'components/header';
 
-function App() {
+import style from './style.module.css';
+
+function App(): JSX.Element {
   const dispatch = useAppDispatch();
-  const data = useAppSelector((state) => state.data);
 
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
 
-  console.log(data);
-
   return (
-    <div>
-      <h1>Hello, world</h1>
-    </div>
+    <>
+      <div className={style.header}>
+        <div className={style.wrapper}>
+          <Header />
+        </div>
+      </div>
+      <div className={style.main}>
+        <div className={style.wrapper}>
+          <Table />
+        </div>
+      </div>
+    </>
   );
 }
 
