@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useAppDispatch, useAppSelector } from 'hook';
+import { fetchData } from 'store/data-slice';
 
 function App() {
-  fetch('/data')
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+  const dispatch = useAppDispatch();
+  const data = useAppSelector((state) => state.data);
+
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+
+  console.log(data);
 
   return (
     <div>
