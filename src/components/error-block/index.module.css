@@ -1,0 +1,5 @@
+.error {
+  width: 500px;
+  margin: auto;
+  transform: translate(0, calc(100vh / 2 - 100px));
+}

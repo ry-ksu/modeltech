@@ -1,0 +1,15 @@
+.main {
+  background-color: #f3f3f2;
+  height: calc(100vh - 50px);
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #06b6d4;
+  height: 50px;
+}
